@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EYEUM</title>
+  <base href="./" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="EYEUM.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+<div class="phone">
+ 
+  <!-- ════════════════════════════════
+       SCREEN 1: SPLASH
+  ════════════════════════════════ -->
+<div class="screen active" id="splash">
+
+  <!-- 배경 사진 -->
+<!-- 배경 사진 -->
+<div class="splash-photo">
+ <img src="./img/96f44030c58a22ada0e9542df8ea2f60.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" alt="EYEUM splash" />
+</div>
+
+  <!-- 어두운 그라디언트 오버레이 -->
+  <div class="splash-overlay"></div>
+
+  <!-- 상태바 -->
+  <div class="splash-status">
+    <span>9:41</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <!-- 신호 아이콘 -->
+      <svg width="16" height="12" viewBox="0 0 16 12" fill="white">
+        <rect x="0" y="3" width="3" height="9" rx="1"/>
+        <rect x="4" y="2" width="3" height="10" rx="1"/>
+        <rect x="8" y="1" width="3" height="11" rx="1"/>
+        <rect x="12" y="0" width="3" height="12" rx="1"/>
+      </svg>
+      <!-- 와이파이 아이콘 -->
+      <svg width="16" height="12" viewBox="0 0 16 12" fill="white">
+        <path d="M8 2C10.5 2 12.8 3 14.4 4.7L16 3C14 1.1 11.1 0 8 0C4.9 0 2 1.1 0 3L1.6 4.7C3.2 3 5.5 2 8 2Z"/>
+        <path d="M8 6C9.4 6 10.7 6.6 11.6 7.5L13.2 5.8C11.9 4.7 10 4 8 4C6 4 4.1 4.7 2.8 5.8L4.4 7.5C5.3 6.6 6.6 6 8 6Z"/>
+        <circle cx="8" cy="11" r="2"/>
+      </svg>
+      <!-- 배터리 아이콘 -->
+      <svg width="25" height="12" viewBox="0 0 25 12" fill="white">
+        <rect x="0" y="1" width="22" height="10" rx="2" stroke="white" stroke-width="1.5" fill="none"/>
+        <rect x="1.5" y="2.5" width="16" height="7" rx="1" fill="white"/>
+        <rect x="22" y="4" width="3" height="4" rx="1" fill="white"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 로고 -->
+  <div class="splash-logo">
+  <img src="img/로고.png" alt="EYEUM 로고" />
+  <span class="brand">EYEUM</span>
+</div>
+
+  <!-- 하단 버튼 영역 -->
+  <div class="splash-bottom">
+    <button class="btn-eyeum-login" onclick="goTo('onboard1')">EYEUM 로그인</button>
+    <button class="btn-kakao" onclick="goTo('onboard1')">
+      <svg width="20" height="18" viewBox="0 0 20 18" fill="#3c1e1e">
+        <path d="M10 0C4.477 0 0 3.358 0 7.5c0 2.666 1.748 5.006 4.386 6.357L3.25 18l5.014-3.262C8.744 14.91 9.368 15 10 15c5.523 0 10-3.358 10-7.5S15.523 0 10 0z"/>
+      </svg>
+      카카오톡 간편 로그인
+    </button>
+
+    <div class="splash-divider"></div>
+    <div class="splash-single">비회원으로 시작하기</div>
+    <div class="splash-divider"></div>
+
+    <div class="splash-row">
+      <a href="#">이메일 로그인</a>
+      <a href="#">회원가입</a>
+      <a href="#">문의하기</a>
+    </div>
+
+    <div class="splash-divider"></div>
+
+    <div class="splash-row" style="justify-content:center;gap:32px;">
+      <a href="#">한국인이 아니라면?</a>
+      <a href="#">글로벌 로그인/가입</a>
+    </div>
+  </div>
+
+</div>
+ 
+  <!-- ════════════════════════════════
+       SCREEN 2: ONBOARD 1
+  ════════════════════════════════ -->
+  <div class="screen" id="onboard1">
+    <div class="status-bar"><span>9:41</span><div class="status-icons"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4C3.5 1.8 5.8 0.8 8 0.8C10.2 0.8 12.5 1.8 15 4"/><path d="M3 6.5C4.8 4.8 6.3 4 8 4C9.7 4 11.2 4.8 13 6.5"/><path d="M5.5 9C6.5 8 7.2 7.5 8 7.5C8.8 7.5 9.5 8 10.5 9"/><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1"/><rect x="22" y="3.5" width="2" height="5" rx="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/></svg></div></div>
+    <div class="onboard-header">
+      <button class="back-btn" onclick="goBack()">←</button>
+      <div class="logo"><img src="img/로고.png" alt="EYEUM 로고" /><span class="logo-text">EYEUM</span></div>
+    </div>
+    <div class="onboard-body">
+      <div class="onboard-title-section">
+        <div style="display:flex;flex-direction:column;gap:26px;">
+          <div class="onboard-title">처음<br>이신가<br>요?</div>
+          <div class="onboard-divider"></div>
+        </div>
+        <div class="onboard-desc">
+          <p>함께 <strong>간단한 질문</strong>에 답하면</p>
+          <p><strong>딱 맞는 렌즈</strong>를 찾아드려요.</p>
+        </div>
+      </div>
+    </div>
+    <div class="onboard-footer">
+      <button class="btn-dark" onclick="goTo('onboard2')">시작하기</button>
+    </div>
+  </div>
+ 
+  <!-- ════════════════════════════════
+       SCREEN 3: 피부톤·눈 프로필
+  ════════════════════════════════ -->
+  <div class="screen" id="onboard2" style="overflow-y:auto;">
+    <div class="status-bar"><span>9:41</span><div class="status-icons"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4C3.5 1.8 5.8 0.8 8 0.8C10.2 0.8 12.5 1.8 15 4"/><path d="M3 6.5C4.8 4.8 6.3 4 8 4C9.7 4 11.2 4.8 13 6.5"/><path d="M5.5 9C6.5 8 7.2 7.5 8 7.5C8.8 7.5 9.5 8 10.5 9"/><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1"/><rect x="22" y="3.5" width="2" height="5" rx="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/></svg></div></div>
+    <div class="onboard-header"><button class="back-btn" onclick="goBack()">←</button><div class="logo"><img src="img/로고.png" alt="EYEUM 로고" /><span class="logo-text">EYEUM</span></div></div>
+    <div style="padding:24px 32px 0;flex-shrink:0;">
+      <div class="onboard-title" style="font-size:64px;">피부톤•눈<br>프로필<br>보기</div>
+      <div class="onboard-divider" style="width:130px;margin-top:16px;"></div>
+    </div>
+
+    <div class="profile-body" style="padding:28px 20px 0;display:flex;flex-direction:column;gap:36px;flex-shrink:0;">
+
+      <!-- 피부 톤 색상 -->
+      <div>
+        <div class="profile-q-label">나의 <strong>피부톤 색상</strong>은?</div>
+        <div style="font-size:12px;color:#9b9ba8;margin-bottom:14px;">1개만 선택할 수 있어요</div>
+        <div class="personal-color-grid">
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#fde0cc;"></div>
+            <div class="personal-color-name">17호</div>
+            <div class="personal-color-desc">아이보리에 가까운 밝은 피부톤</div>
+          </button>
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#f9c2a3;"></div>
+            <div class="personal-color-name">19호</div>
+            <div class="personal-color-desc">밝고 핑크빛이 도는 피부톤</div>
+          </button>
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#eea980;"></div>
+            <div class="personal-color-name">21호</div>
+            <div class="personal-color-desc">자연스러운 중간 피부톤</div>
+          </button>
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#e3a175;"></div>
+            <div class="personal-color-name">22호</div>
+            <div class="personal-color-desc">약간 어두운 웜 피부톤</div>
+          </button>
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#d58758;"></div>
+            <div class="personal-color-name">23호</div>
+            <div class="personal-color-desc">깊고 따뜻한 다크 피부톤</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- 퍼스널 컬러 -->
+      <div>
+        <div class="profile-q-label">퍼스널컬러를 <strong>알려주세요</strong></div>
+        <div style="font-size:12px;color:#9b9ba8;margin-bottom:14px;">1개만 선택할 수 있어요</div>
+        <div class="personal-color-grid">
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#f4b0a0;"></div>
+            <div class="personal-color-name">봄웜톤</div>
+            <div class="personal-color-desc">베이지나 주황처럼 밝고 산뜻한 색상이 잘 어울려요</div>
+          </button>
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#c8b0c0;"></div>
+            <div class="personal-color-name">여름쿨톤</div>
+            <div class="personal-color-desc">흰 빛을 띤 파스텔 계열의 색상이 잘 어울려요</div>
+          </button>
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#e0a870;"></div>
+            <div class="personal-color-name">가을웜톤</div>
+            <div class="personal-color-desc">따뜻하고 깊은 어스톤 계열의 색상이 잘 어울려요</div>
+          </button>
+          <button class="personal-color-card" onclick="selectCard(this)">
+            <div class="personal-color-circle" style="background:#dcd8e0;"></div>
+            <div class="personal-color-name">겨울쿨톤</div>
+            <div class="personal-color-desc">선명하고 대비가 강한 차가운 색상이 잘 어울려요</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- 눈동자 색상 -->
+      <div>
+        <div class="profile-q-label">나의 <strong>눈동자 색상</strong>은?</div>
+        <input class="eye-input" type="text" placeholder="예) 짙은 갈색, 블랙" />
+      </div>
+    </div>
+
+    <div class="onboard-footer" style="margin-top:32px;">
+      <button class="btn-dark" onclick="validateOnboard2()">다음</button>
+    </div>
+  </div>
+
+  <!-- 온보딩2 필수선택 모달 -->
+  <div id="onboard2Modal" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);" onclick="closeOnboard2Modal()"></div>
+    <div style="position:relative;background:#fff;border-radius:20px;padding:36px 28px 28px;width:300px;text-align:center;z-index:1;">
+      <div style="font-size:15px;font-weight:600;color:#3b3b46;line-height:1.7;margin-bottom:28px;">
+        더 정확한 컬러 추천을 위해<br>선택해주세요
+      </div>
+      <button class="btn-dark" onclick="closeOnboard2Modal()">닫기</button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       SCREEN 4: AR 렌즈 추천
+  ════════════════════════════════ -->
+  <div class="screen" id="onboard3" style="overflow-y:auto;">
+    <div class="status-bar"><span>9:41</span><div class="status-icons"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4C3.5 1.8 5.8 0.8 8 0.8C10.2 0.8 12.5 1.8 15 4"/><path d="M3 6.5C4.8 4.8 6.3 4 8 4C9.7 4 11.2 4.8 13 6.5"/><path d="M5.5 9C6.5 8 7.2 7.5 8 7.5C8.8 7.5 9.5 8 10.5 9"/><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1"/><rect x="22" y="3.5" width="2" height="5" rx="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/></svg></div></div>
+    <div class="onboard-header"><button class="back-btn" onclick="goBack()">←</button><div class="logo"><img src="img/로고.png" alt="EYEUM 로고" /><span class="logo-text">EYEUM</span></div></div>
+    <div style="padding:24px 32px 0;flex-shrink:0;">
+      <div class="onboard-title" style="font-size:56px;">AR맞춤<br>렌즈<br>추천</div>
+      <div class="onboard-divider"></div>
+      <div class="onboard-desc" style="margin-bottom:16px;">00님에게 맞는<br><strong>렌즈 추천리스트</strong>예요.</div>
+    </div>
+    <div class="recommend-body">
+      <div class="product-grid-2">
+        <div class="product-card">
+          <div class="img-placeholder" style="height:160px;border-radius:12px 12px 0 0;background:linear-gradient(135deg,#c8b8a8,#a89888);">
+            <span style="font-size:36px;">👁</span>
+          </div>
+          <div class="product-info">
+            <div class="product-name">뮤스존 베이지 (목고정)</div>
+            <div class="product-price">25,000원</div>
+            <div class="product-name">12.8mm | 한 달 착용</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="img-placeholder" style="height:160px;border-radius:12px 12px 0 0;background:linear-gradient(135deg,#b0a898,#988878);">
+            <span style="font-size:36px;">👁</span>
+          </div>
+          <div class="product-info">
+            <div class="product-name">뮤스 초코</div>
+            <div class="product-price">25,000원</div>
+            <div class="product-name">12.8mm</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="img-placeholder" style="height:160px;border-radius:12px 12px 0 0;background:linear-gradient(135deg,#d0c0b0,#b8a890);">
+            <span style="font-size:36px;">👁</span>
+          </div>
+          <div class="product-info">
+            <div class="product-name">뮤스존 베이지 (목고정)</div>
+            <div class="product-price">25,000원</div>
+            <div class="product-name">12.8mm | 한 달 착용</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="img-placeholder" style="height:160px;border-radius:12px 12px 0 0;background:linear-gradient(135deg,#a89880,#908068);">
+            <span style="font-size:36px;">👁</span>
+          </div>
+          <div class="product-info">
+            <div class="product-name">뮤스 초코</div>
+            <div class="product-price">25,000원</div>
+            <div class="product-name">12.8mm</div>
+          </div>
+        </div>
+      </div>
+      <div class="recommend-q">EYEUM이 추천하는<br>렌즈 마음에 드시나요?</div>
+      <button class="btn-dark" style="margin-bottom:20px;" onclick="goTo('onboard4')">다음</button>
+    </div>
+  </div>
+ 
+  <!-- ════════════════════════════════
+       SCREEN 5: 시작해볼까요?
+  ════════════════════════════════ -->
+  <div class="screen" id="onboard4">
+    <div class="status-bar"><span>9:41</span><div class="status-icons"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4C3.5 1.8 5.8 0.8 8 0.8C10.2 0.8 12.5 1.8 15 4"/><path d="M3 6.5C4.8 4.8 6.3 4 8 4C9.7 4 11.2 4.8 13 6.5"/><path d="M5.5 9C6.5 8 7.2 7.5 8 7.5C8.8 7.5 9.5 8 10.5 9"/><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1"/><rect x="22" y="3.5" width="2" height="5" rx="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/></svg></div></div>
+    <div class="onboard-header"><button class="back-btn" onclick="goBack()">←</button><div class="logo"><img src="img/로고.png" alt="EYEUM 로고" /><span class="logo-text">EYEUM</span></div></div>
+    <div class="start-body">
+      <div class="onboard-title">시작해<br>볼까<br>요?</div>
+      <div class="onboard-divider"></div>
+      <div class="start-desc">이제 렌즈도 <strong>간편하게</strong><br>고르고 원하는건 <strong>바로바로!</strong></div>
+    </div>
+    <div class="onboard-footer">
+      <button class="btn-dark" onclick="goTo('home')">저장하기</button>
+    </div>
+  </div>
+ 
+  <!-- ════════════════════════════════
+       SCREEN 6: HOME (메인)
+  ════════════════════════════════ -->
+  <div class="screen has-bottom-nav" id="home">
+    <!-- Nav -->
+    <div class="home-nav" style="flex-shrink:0;">
+      <div class="hamburger"><span></span><span></span><span></span></div>
+      <div class="logo"><img src="img/로고.png" alt="EYEUM 로고" /><span class="logo-text">EYEUM</span></div>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" onclick="goTo('search');setTimeout(()=>document.getElementById('searchInput').focus(),100)">
+          <img src="img/스크린샷 2026-05-20 오후 5.36.45.png" alt="검색" style="width:20px;height:20px;object-fit:contain;" />
+        </button>
+        <button class="nav-icon-btn" onclick="goTo('bag');setNav('bag')">
+          <img src="img/스크린샷 2026-05-20 오후 4.47.06.png" alt="장바구니" style="width:28px;height:28px;object-fit:contain;" />
+        </button>
+      </div>
+    </div>
+ 
+    <!-- Hero Banner -->
+    <div class="hero-banner" style="flex-shrink:0;">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide"><img src="img/(홈)상단1.jpg" alt="" /></div>
+        <div class="hero-slide"><img src="img/(홈)상단2.jpg" alt="" /></div>
+        <div class="hero-slide"><img src="img/(홈)상단3.jpg" alt="" /></div>
+      </div>
+      <!-- 오버레이 & 텍스트: 슬라이더 밖에 고정 -->
+      <div class="hero-overlay"></div>
+      <div class="hero-text" id="heroText">
+        <div class="hero-sub" id="heroSub">For the Beautiful and the Free</div>
+        <div class="hero-title" id="heroTitle">EYEUM's own<br>Holiday Collection</div>
+      </div>
+      <!-- 인디케이터 dots -->
+      <div class="hero-dots">
+        <span class="hero-dot active" onclick="goSlide(0)"></span>
+        <span class="hero-dot" onclick="goSlide(1)"></span>
+        <span class="hero-dot" onclick="goSlide(2)"></span>
+      </div>
+    </div>
+ 
+    <!-- FIND YOUR LENS -->
+    <div class="section-header" style="flex-shrink:0;">
+      <div>
+        <div class="section-title-en">FIND YOUR LENS</div>
+        <div class="section-subtitle">EYEUM이 추천하는 00님의 렌즈</div>
+      </div>
+      <button class="more-btn" onclick="goTo('product-list')">보러 가기</button>
+    </div>
+    <div class="home-product-grid" id="grid-find" style="flex-shrink:0;">
+      <div class="home-product-card" onclick="goToDetail()">
+        <img src="img/앱진입화면2(1).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">루비문 앙큼 캣츠그레이 (축고정)</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card" onclick="goToDetail()">
+        <img src="img/앱진입화면2(2).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">판데이아 베이지</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card" onclick="goToDetail()">
+        <img src="img/앱진입화면2(3).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">뮤스존 베이지 (축고정)</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card" onclick="goToDetail()">
+        <img src="img/앱진입화면2(4).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">뮤스 초코</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="product-dots" style="flex-shrink:0;">
+      <span class="product-dot active" data-grid="grid-find" data-idx="0"></span>
+      <span class="product-dot" data-grid="grid-find" data-idx="1"></span>
+    </div>
+ 
+    <!-- AR Banner -->
+    <div class="ar-banner" style="flex-shrink:0;">
+      <p class="ar-banner-title">나만의 취향대로,</p>
+      <p class="ar-banner-sub">간편하게 <strong>니즈</strong>에 맞춰주는 <strong>AR</strong></p>
+      <div class="infinity"><img src="img/로고.png" alt="EYEUM 심볼" style="width:40px;height:auto;display:block;margin:0 auto;opacity:0.6;" /></div>
+      <button class="btn-ar" onclick="goTo('ar')">실시간 AR착용하러가기 →</button>
+    </div>
+ 
+    <!-- BEST ONE DAY -->
+    <div class="section-header" style="flex-shrink:0;">
+      <div><div class="section-title-en"><span style="font-size:13px;font-weight:600;letter-spacing:2px;">BEST</span><br><span style="font-size:28px;font-weight:800;letter-spacing:1px;">ONE DAY</span></div></div>
+      <button class="more-btn" onclick="goTo('product-list')">보러 가기</button>
+    </div>
+    <div class="home-product-grid" id="grid-oneday" style="flex-shrink:0;">
+      <div class="home-product-card">
+        <img src="img/(홈)원데이1.jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">루비문 앙큼 캣츠그레이 (축고정)</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card">
+        <img src="img/(홈)원데이2.jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">판데이아 베이지</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card">
+        <img src="img/앱진입화면2(1).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">글래시 올리브그린</div>
+          <div class="home-product-price">15,000원 <span>14.0mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card">
+        <img src="img/앱진입화면2(3).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">소프렌 포레스트</div>
+          <div class="home-product-price">15,000원 <span>13.8mm / 하루착용</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="product-dots" style="flex-shrink:0;">
+      <span class="product-dot active" data-grid="grid-oneday" data-idx="0"></span>
+      <span class="product-dot" data-grid="grid-oneday" data-idx="1"></span>
+    </div>
+ 
+    <!-- BEST MONTH -->
+    <div class="section-header" style="flex-shrink:0;">
+      <div><div class="section-title-en"><span style="font-size:13px;font-weight:600;letter-spacing:2px;">BEST</span><br><span style="font-size:28px;font-weight:800;letter-spacing:1px;">MONTH</span></div></div>
+      <button class="more-btn" onclick="goTo('product-list')">보러 가기</button>
+    </div>
+    <div class="home-product-grid" id="grid-month" style="flex-shrink:0;">
+      <div class="home-product-card">
+        <img src="img/앱진입화면2(3).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">뮤스존 베이지 (축고정)</div>
+          <div class="home-product-price">25,000원 <span>13.8mm / 한달착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card">
+        <img src="img/앱진입화면2(4).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">뮤스 초코</div>
+          <div class="home-product-price">25,000원 <span>13.8mm / 한달착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card">
+        <img src="img/(홈)원데이1.jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">글래시 하니브라운 (축고정)</div>
+          <div class="home-product-price">25,000원 <span>13.5mm / 한달착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card">
+        <img src="img/(홈)원데이2.jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">소프렌 블루라떼</div>
+          <div class="home-product-price">25,000원 <span>14.0mm / 한달착용</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="product-dots" style="flex-shrink:0;">
+      <span class="product-dot active" data-grid="grid-month" data-idx="0"></span>
+      <span class="product-dot" data-grid="grid-month" data-idx="1"></span>
+    </div>
+ 
+    <!-- Shop All -->
+    <div style="text-align:center; padding:20px; flex-shrink:0;">
+      <button style="background:none;border:none;font-family:'Noto Sans KR',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;cursor:pointer;text-decoration:underline;">Shop All →</button>
+    </div>
+ 
+    <!-- Footer -->
+    <div class="home-footer">
+      <div class="footer-logo"><img src="img/로고.png" alt="EYEUM 심볼" style="width:24px;height:auto;vertical-align:middle;margin-right:6px;filter:invert(1);opacity:0.8;" />EYEUM</div>
+      <div class="footer-links">
+        <a href="#">배송정보</a><a href="#">고객센터</a><a href="#">교환 환불 안내</a><a href="#">예약 안내</a>
+      </div>
+      <div class="footer-desc">서울특별시 마포구 염화로 182, 1층<br>렌즈신유로부터 제조·수입되며, 제조 배치번호에서 세부 기재 가능한 정보 확인</div>
+    </div>
+  </div>
+ 
+  <!-- ════════════════════════════════
+       SCREEN: 검색
+  ════════════════════════════════ -->
+  <div class="screen has-bottom-nav" id="search">
+    <div class="status-bar" style="flex-shrink:0;"><span>9:41</span><div class="status-icons"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4C3.5 1.8 5.8 0.8 8 0.8C10.2 0.8 12.5 1.8 15 4"/><path d="M3 6.5C4.8 4.8 6.3 4 8 4C9.7 4 11.2 4.8 13 6.5"/><path d="M5.5 9C6.5 8 7.2 7.5 8 7.5C8.8 7.5 9.5 8 10.5 9"/><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1"/><rect x="22" y="3.5" width="2" height="5" rx="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/></svg></div></div>
+    <!-- 검색 헤더 -->
+    <div style="display:flex;align-items:center;gap:10px;padding:12px 16px 10px;flex-shrink:0;">
+      <button onclick="goBack()" style="background:none;border:none;font-size:20px;cursor:pointer;padding:0;line-height:1;color:#1a1a1a;">‹</button>
+      <div style="flex:1;display:flex;align-items:center;background:#f4f4f4;border-radius:10px;padding:10px 14px;gap:8px;">
+        <img src="img/스크린샷 2026-05-20 오후 5.36.45.png" alt="검색" style="width:16px;height:16px;object-fit:contain;opacity:0.5;" />
+        <input id="searchInput" type="text" placeholder="렌즈 검색하기" oninput="runSearch(this.value)"
+          style="border:none;background:none;outline:none;font-size:14px;font-family:'Noto Sans KR',sans-serif;width:100%;color:#1a1a1a;" autofocus />
+      </div>
+    </div>
+    <!-- 최근 검색어 -->
+    <div id="searchRecent" style="padding:16px 20px;flex-shrink:0;">
+      <div style="font-size:12px;font-weight:700;color:#888;margin-bottom:12px;letter-spacing:0.5px;">최근 검색어</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;" id="recentTags">
+        <span class="search-tag" onclick="searchTag(this)">루비문</span>
+        <span class="search-tag" onclick="searchTag(this)">원데이렌즈</span>
+        <span class="search-tag" onclick="searchTag(this)">베이지</span>
+        <span class="search-tag" onclick="searchTag(this)">캣츠그레이</span>
+      </div>
+    </div>
+    <!-- 검색 결과 -->
+    <div id="searchResults" style="display:none;flex:1;overflow-y:auto;padding:0 16px;">
+      <div style="font-size:12px;font-weight:700;color:#888;margin-bottom:12px;letter-spacing:0.5px;" id="searchResultCount"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#e8e8e4;" id="searchResultGrid"></div>
+    </div>
+    <!-- 결과 없음 -->
+    <div id="searchEmpty" style="display:none;flex:1;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+      <div style="font-size:14px;color:#aaa;">검색 결과가 없어요</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       SCREEN: 제품 전체 목록
+  ════════════════════════════════ -->
+  <div class="screen has-bottom-nav" id="product-list">
+    <div class="status-bar" style="flex-shrink:0;"><span>9:41</span><div class="status-icons"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4C3.5 1.8 5.8 0.8 8 0.8C10.2 0.8 12.5 1.8 15 4"/><path d="M3 6.5C4.8 4.8 6.3 4 8 4C9.7 4 11.2 4.8 13 6.5"/><path d="M5.5 9C6.5 8 7.2 7.5 8 7.5C8.8 7.5 9.5 8 10.5 9"/><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1"/><rect x="22" y="3.5" width="2" height="5" rx="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/></svg></div></div>
+    <div style="display:flex;align-items:center;padding:12px 16px 8px;flex-shrink:0;gap:8px;">
+      <button onclick="goBack()" style="background:none;border:none;font-size:20px;cursor:pointer;padding:0;line-height:1;">‹</button>
+      <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;letter-spacing:0.5px;">Products</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#e8e8e4;flex:1;overflow-y:auto;">
+      <div class="home-product-card" onclick="goToDetail()" style="width:100%;border-radius:0;">
+        <img src="img/앱진입화면2(1).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">루비문 앙큼 캣츠그레이 (축고정)</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card" onclick="goToDetail()" style="width:100%;border-radius:0;">
+        <img src="img/앱진입화면2(2).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">판데이아 베이지</div>
+          <div class="home-product-price">15,000원 <span>12.7mm</span></div>
+        </div>
+      </div>
+      <div class="home-product-card" onclick="goToDetail()" style="width:100%;border-radius:0;">
+        <img src="img/앱진입화면2(3).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">뮤스존 베이지 (축고정)</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="home-product-card" onclick="goToDetail()" style="width:100%;border-radius:0;">
+        <img src="img/앱진입화면2(4).jpg" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">뮤스 초코</div>
+          <div class="home-product-price">15,000원 <span>12.7mm</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       SCREEN 7: AR 미리보기
+  ════════════════════════════════ -->
+  <div class="screen has-bottom-nav" id="ar">
+    <div class="ar-screen-nav" style="flex-shrink:0;">
+      <div class="hamburger"><span></span><span></span><span></span></div>
+      <div class="logo"><img src="img/로고.png" alt="EYEUM 로고" /><span class="logo-text">EYEUM</span></div>
+      <div class="nav-icons"><button class="nav-icon-btn">🔍</button><button class="nav-icon-btn">🛍</button></div>
+    </div>
+    <div style="padding:0 20px 12px;font-size:18px;font-weight:700;flex-shrink:0;">눈에 맞는지<br>여기서 확인해!</div>
+    <div class="ar-face" style="flex-shrink:0;">
+      <img src="img/AR분석이미지.jpg" style="width:100%;height:auto;display:block;" alt="AR 분석" />
+      <!-- 스캔 라인 -->
+      <div class="ar-scan-line"></div>
+      <!-- 얼굴 메쉬 선 -->
+      <svg class="ar-mesh" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line class="ar-line" x1="38" y1="28" x2="58" y2="28"/><!-- 눈-눈 -->
+        <line class="ar-line" x1="38" y1="28" x2="30" y2="38"/><!-- 좌눈-좌볼 -->
+        <line class="ar-line" x1="58" y1="28" x2="66" y2="38"/><!-- 우눈-우볼 -->
+        <line class="ar-line" x1="30" y1="38" x2="66" y2="38"/><!-- 볼-볼 -->
+        <line class="ar-line" x1="38" y1="28" x2="50" y2="48"/><!-- 좌눈-코 -->
+        <line class="ar-line" x1="58" y1="28" x2="50" y2="48"/><!-- 우눈-코 -->
+        <line class="ar-line" x1="30" y1="38" x2="50" y2="48"/><!-- 좌볼-코 -->
+        <line class="ar-line" x1="66" y1="38" x2="50" y2="48"/><!-- 우볼-코 -->
+        <line class="ar-line" x1="50" y1="48" x2="44" y2="55"/><!-- 코-좌입 -->
+        <line class="ar-line" x1="50" y1="48" x2="56" y2="55"/><!-- 코-우입 -->
+        <line class="ar-line" x1="44" y1="55" x2="56" y2="55"/><!-- 입꼬리 -->
+        <line class="ar-line" x1="30" y1="38" x2="44" y2="55"/><!-- 좌얼굴선 -->
+        <line class="ar-line" x1="66" y1="38" x2="56" y2="55"/><!-- 우얼굴선 -->
+        <line class="ar-line" x1="44" y1="55" x2="50" y2="65"/><!-- 좌턱 -->
+        <line class="ar-line" x1="56" y1="55" x2="50" y2="65"/><!-- 우턱 -->
+      </svg>
+      <!-- AR dots -->
+      <div class="ar-dots-overlay">
+        <div class="ar-dot" style="top:28%;left:38%;"></div>
+        <div class="ar-dot" style="top:28%;left:58%;"></div>
+        <div class="ar-dot" style="top:38%;left:30%;"></div>
+        <div class="ar-dot" style="top:38%;left:66%;"></div>
+        <div class="ar-dot" style="top:48%;left:50%;"></div>
+        <div class="ar-dot" style="top:55%;left:44%;"></div>
+        <div class="ar-dot" style="top:55%;left:56%;"></div>
+        <div class="ar-dot" style="top:65%;left:50%;"></div>
+      </div>
+      <!-- AR검사하기 버튼 -->
+      <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:20;">
+        <button style="background:rgba(255,255,255,0.92);border:none;border-radius:999px;padding:10px 36px;font-size:13px;font-weight:600;font-family:'Raleway','Noto Sans KR',sans-serif;color:#222;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.12);letter-spacing:0.5px;">AR검사하기</button>
+      </div>
+    </div>
+    <!-- 추천 리스트 섹션 -->
+    <div style="padding:32px 16px 14px;flex-shrink:0;">
+      <div style="font-size:26px;font-weight:800;line-height:1.2;font-family:'Raleway',sans-serif;"><span style="font-style:italic;">EYEUM</span>이<br>추천하는 리스트!</div>
+    </div>
+    <div class="ar-product-grid" id="grid-ar1" style="flex-shrink:0;">
+      <div class="ar-rec-card">
+        <img src="img/앱진입화면2(1).jpg" style="width:100%;height:270px;object-fit:cover;object-position:center top;display:block;" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">루비문 앙큼 캣츠그레이 (축고정)</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="ar-rec-card">
+        <img src="img/앱진입화면2(3).jpg" style="width:100%;height:270px;object-fit:cover;object-position:center top;display:block;" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">판데이아 베이지</div>
+          <div class="home-product-price">15,000원 <span>12.7mm</span></div>
+        </div>
+      </div>
+      <div class="ar-rec-card">
+        <img src="img/(홈)원데이1.jpg" style="width:100%;height:270px;object-fit:cover;object-position:center top;display:block;" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">글래시 올리브그린</div>
+          <div class="home-product-price">15,000원 <span>14.0mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="ar-rec-card">
+        <img src="img/(홈)원데이2.jpg" style="width:100%;height:270px;object-fit:cover;object-position:center top;display:block;" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">소프렌 포레스트</div>
+          <div class="home-product-price">15,000원 <span>13.8mm / 하루착용</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="product-dots" style="flex-shrink:0;">
+      <span class="product-dot active" data-grid="grid-ar1" data-idx="0"></span>
+      <span class="product-dot" data-grid="grid-ar1" data-idx="1"></span>
+    </div>
+
+    <!-- RECOMMENDATION FOR A SPECIAL DAY 섹션 -->
+    <div style="padding:40px 16px 14px;flex-shrink:0;">
+      <div style="font-size:24px;font-weight:800;line-height:1.2;font-family:'Raleway',sans-serif;letter-spacing:-0.5px;">RECOMMENDATION<br>FOR A SPECIAL DAY</div>
+    </div>
+    <div class="ar-product-grid" id="grid-ar2" style="flex-shrink:0;">
+      <div class="ar-rec-card">
+        <img src="img/앱진입화면2(2).jpg" style="width:100%;height:270px;object-fit:cover;object-position:center top;display:block;" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">루비문 앙큼 캣츠그레이 (축고정)</div>
+          <div class="home-product-price">15,000원 <span>12.7mm / 하루착용</span></div>
+        </div>
+      </div>
+      <div class="ar-rec-card">
+        <img src="img/앱진입화면2(4).jpg" style="width:100%;height:270px;object-fit:cover;object-position:center top;display:block;" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">판데이아 베이지</div>
+          <div class="home-product-price">15,000원 <span>12.7mm</span></div>
+        </div>
+      </div>
+      <div class="ar-rec-card">
+        <img src="img/앱진입화면2(1).jpg" style="width:100%;height:270px;object-fit:cover;object-position:center top;display:block;" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">글래시 하니브라운 (축고정)</div>
+          <div class="home-product-price">25,000원 <span>13.5mm / 한달착용</span></div>
+        </div>
+      </div>
+      <div class="ar-rec-card">
+        <img src="img/앱진입화면2(3).jpg" style="width:100%;height:270px;object-fit:cover;object-position:center top;display:block;" alt="" />
+        <div class="home-product-info">
+          <div class="home-product-name">소프렌 블루라떼</div>
+          <div class="home-product-price">25,000원 <span>14.0mm / 한달착용</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="product-dots" style="flex-shrink:0;">
+      <span class="product-dot active" data-grid="grid-ar2" data-idx="0"></span>
+      <span class="product-dot" data-grid="grid-ar2" data-idx="1"></span>
+    </div>
+
+    <!-- 하단 CTA -->
+    <div style="text-align:center;padding:44px 20px 14px;font-size:14px;font-weight:500;flex-shrink:0;font-family:'Raleway','Noto Sans KR',sans-serif;"><span style="font-style:italic;font-weight:700;">EYEUM</span>이 추천하는<br>제품은 마음에 드시나요?</div>
+    <div style="padding:0 20px;display:flex;flex-direction:column;gap:12px;flex-shrink:0;padding-bottom:36px;">
+      <button class="btn-dark" onclick="goTo('ar')">다시 검사하기</button>
+      <button class="btn-dark" style="background:#e8e8e8;color:#333;border:none;">저장하기</button>
+    </div>
+  </div>
+ 
+  <!-- ════════════════════════════════
+       SCREEN 8: 장바구니
+  ════════════════════════════════ -->
+  <div class="screen has-bottom-nav" id="bag">
+    <div class="status-bar" style="flex-shrink:0;"><span>9:41</span><div class="status-icons"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4C3.5 1.8 5.8 0.8 8 0.8C10.2 0.8 12.5 1.8 15 4"/><path d="M3 6.5C4.8 4.8 6.3 4 8 4C9.7 4 11.2 4.8 13 6.5"/><path d="M5.5 9C6.5 8 7.2 7.5 8 7.5C8.8 7.5 9.5 8 10.5 9"/><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1"/><rect x="22" y="3.5" width="2" height="5" rx="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/></svg></div></div>
+    <div class="bag-header" style="flex-shrink:0;position:relative;display:flex;justify-content:center;align-items:center;">
+      <button class="back-btn" onclick="goBack()" style="color:#222;">←</button>
+      <div class="bag-title">MY BAG</div>
+    </div>
+ 
+    <div class="bag-item" style="flex-shrink:0;">
+      <img src="img/상세페이지메인.jpg" style="width:90px;height:120px;border-radius:12px;object-fit:cover;flex-shrink:0;" alt="" />
+      <div class="bag-item-info">
+        <div class="bag-item-name">루비문 앙큼 캣츠그레이 (축고정)</div>
+        <div class="bag-item-price">15,000원</div>
+        <div class="bag-item-sub">12.7mm | 하루착용</div>
+      </div>
+      <div class="bag-check"></div>
+    </div>
+    <div class="bag-item" style="flex-shrink:0;">
+      <img src="img/앱진입화면2(3).jpg" style="width:90px;height:120px;border-radius:12px;object-fit:cover;flex-shrink:0;" alt="" />
+      <div class="bag-item-info">
+        <div class="bag-item-name">루비문 앙큼 캣츠올리브 (축고정)</div>
+        <div class="bag-item-price">15,000원</div>
+        <div class="bag-item-sub">12.7mm | 하루착용</div>
+      </div>
+      <div class="bag-check"></div>
+    </div>
+ 
+    <div class="bag-total" style="flex-shrink:0;">
+      <span class="bag-total-label">결제 금액</span>
+      <span class="bag-total-price">30,000원</span>
+    </div>
+ 
+    <div class="pickup-section" style="flex-shrink:0;">
+      <div class="pickup-title">렌즈 픽업장소</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">메인매장으로 등록하기</div>
+
+      <!-- 선택된 장소 표시 + 변경 버튼 -->
+      <div class="pickup-selected" id="pickupSelected" onclick="openPickupSearch()">
+        <span id="pickupSelectedText" style="color:#aaa;">픽업장소 선택하기</span>
+        <span style="font-size:11px;color:#162F4F;font-weight:600;" id="pickupChangeBtn"></span>
+      </div>
+
+      <!-- 검색 + 목록 (처음엔 숨김) -->
+      <div id="pickupSearchArea" style="display:none;margin-top:12px;">
+        <div class="pickup-search-row">
+          <input id="pickupSearchInput" class="pickup-search-input" placeholder="지점명 검색" oninput="filterBranches(this.value)" />
+          <button class="btn-search" onclick="filterBranches(document.getElementById('pickupSearchInput').value)">검색</button>
+        </div>
+        <div style="font-size:11px;color:var(--text-muted);margin:10px 0 6px;display:flex;align-items:center;gap:4px;">
+          <span>📍</span><span>현위치 기준 거리순</span>
+        </div>
+        <div class="pickup-branch-list" id="pickupBranchList">
+          <div class="pickup-branch" data-name="마포점" onclick="selectBranch(this,'마포점','서울 마포구 양화로 162, 1층')">
+            <div class="pickup-branch-left">
+              <div class="pickup-branch-name">EYEUM 마포점</div>
+              <div class="pickup-branch-addr">서울 마포구 양화로 162, 1층</div>
+            </div>
+            <div class="pickup-branch-dist">0.3km</div>
+          </div>
+          <div class="pickup-branch" data-name="홍대점" onclick="selectBranch(this,'홍대점','서울 마포구 와우산로 94, 2층')">
+            <div class="pickup-branch-left">
+              <div class="pickup-branch-name">EYEUM 홍대점</div>
+              <div class="pickup-branch-addr">서울 마포구 와우산로 94, 2층</div>
+            </div>
+            <div class="pickup-branch-dist">1.1km</div>
+          </div>
+          <div class="pickup-branch" data-name="신촌점" onclick="selectBranch(this,'신촌점','서울 서대문구 신촌로 83, 1층')">
+            <div class="pickup-branch-left">
+              <div class="pickup-branch-name">EYEUM 신촌점</div>
+              <div class="pickup-branch-addr">서울 서대문구 신촌로 83, 1층</div>
+            </div>
+            <div class="pickup-branch-dist">2.0km</div>
+          </div>
+          <div class="pickup-branch" data-name="강남점" onclick="selectBranch(this,'강남점','서울 강남구 테헤란로 152, 1층')">
+            <div class="pickup-branch-left">
+              <div class="pickup-branch-name">EYEUM 강남점</div>
+              <div class="pickup-branch-addr">서울 강남구 테헤란로 152, 1층</div>
+            </div>
+            <div class="pickup-branch-dist">8.4km</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-confirm" onclick="goTo('home')">결제하기</button>
+    </div>
+    <div style="height:20px;flex-shrink:0;"></div>
+  </div>
+ 
+  <!-- ════════════════════════════════
+       SCREEN 9: 마이페이지
+  ════════════════════════════════ -->
+  <div class="screen has-bottom-nav" id="mypage">
+    <div class="status-bar" style="flex-shrink:0;"><span>9:41</span><div class="status-icons"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 4C3.5 1.8 5.8 0.8 8 0.8C10.2 0.8 12.5 1.8 15 4"/><path d="M3 6.5C4.8 4.8 6.3 4 8 4C9.7 4 11.2 4.8 13 6.5"/><path d="M5.5 9C6.5 8 7.2 7.5 8 7.5C8.8 7.5 9.5 8 10.5 9"/><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/></svg><svg width="25" height="12" viewBox="0 0 25 12" fill="currentColor"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1"/><rect x="22" y="3.5" width="2" height="5" rx="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/></svg></div></div>
+    <div class="mypage-header" style="flex-shrink:0;position:relative;display:flex;justify-content:center;align-items:center;">
+      <button class="back-btn" onclick="goBack()" style="color:#222;">←</button>
+      마이페이지
+    </div>
+ 
+    <!-- Profile Card -->
+    <div class="mypage-profile-card" style="flex-shrink:0;">
+      <div class="profile-row">
+        <div class="avatar">🧑</div>
+        <div>
+          <div class="profile-name">차경아님</div>
+          <div class="profile-meta">주소: 서울특별시 OO동</div>
+          <div class="profile-meta">누적 포인트: <span class="points-badge">3000p</span></div>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:var(--text-muted);display:flex;gap:8px;">
+          <span>수정</span><span>편집</span>
+        </div>
+      </div>
+      <div class="profile-icons-row">
+        <div class="profile-icon-item"><div class="icon-circle">🛍</div><span>구매내역</span></div>
+        <div class="profile-icon-item"><div class="icon-circle">⭐</div><span>스마트뷰수품</span></div>
+        <div class="profile-icon-item"><div class="icon-circle">❤️</div><span>찜한렌즈</span></div>
+      </div>
+    </div>
+ 
+    <!-- Tabs -->
+    <div class="mypage-tabs" style="flex-shrink:0;">
+      <div class="tab-chip active" onclick="scrollToSection('sec-personal', this)">개인맞춤관리</div>
+      <div class="tab-chip" onclick="scrollToSection('sec-history', this)">이용내역관리</div>
+      <div class="tab-chip" onclick="scrollToSection('sec-reminder', this)">재구매·알림설정</div>
+      <div class="tab-chip" onclick="scrollToSection('sec-review', this)">내가 쓴 후기</div>
+      <div class="tab-chip" onclick="scrollToSection('sec-cycle', this)">교체주기관리</div>
+    </div>
+
+    <!-- Sections -->
+    <div id="sec-personal" class="mypage-section" style="flex-shrink:0;">
+      <div class="mypage-section-title">개인맞춤관리</div>
+      <div class="mypage-menu-item"><span>착용 목적</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>원하는 분위기</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>선호 컬러</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>직경 스타일</span><span>›</span></div>
+    </div>
+
+    <div id="sec-history" class="mypage-section" style="flex-shrink:0;">
+      <div class="mypage-section-title">이용내역관리</div>
+      <div class="mypage-menu-item"><span>착용 후기</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>이번 달 착용렌즈/착용시작날짜</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>픽업 내용</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>교환 및 환불</span><span>›</span></div>
+    </div>
+
+    <div id="sec-reminder" class="mypage-section" style="flex-shrink:0;">
+      <div class="mypage-section-title">재구매·알람설정</div>
+      <div class="mypage-menu-item"><span>주기 기반 알림</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>취향 기반 신제품 알림</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>착용 • 건강 알림</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>이벤트 • 할인 알림</span><span>›</span></div>
+    </div>
+ 
+    <div id="sec-review" class="mypage-section" style="flex-shrink:0;">
+      <div class="mypage-section-title">내가 쓴 후기</div>
+      <div class="mypage-menu-item"><span>나만의 렌즈 기록</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>내가 쓴 리뷰보기</span><span>›</span></div>
+    </div>
+ 
+    <div id="sec-cycle" class="mypage-section" style="flex-shrink:0;margin-bottom:20px;">
+      <div class="mypage-section-title">교체주기관리</div>
+      <div class="mypage-menu-item"><span>구매시 자동설정</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>자동계산 • 수동계산</span><span>›</span></div>
+      <div class="mypage-menu-item"><span>남은 기간 알림</span><span>›</span></div>
+    </div>
+  </div>
+ 
+  <!-- ════════════════════════════════
+       SCREEN 10: 상세페이지
+  ════════════════════════════════ -->
+  <div class="screen" id="detail">
+ 
+    <!-- 네비게이션 -->
+    <div class="detail-nav" style="flex-shrink:0;">
+      <button class="detail-back" onclick="goBack()">←</button>
+      <div class="logo"><img src="img/로고.png" alt="EYEUM 로고" /><span class="logo-text">EYEUM</span></div>
+      <div class="detail-nav-icons">
+        <button class="nav-icon-btn" onclick="goTo('search');setTimeout(()=>document.getElementById('searchInput').focus(),100)">
+          <img src="img/스크린샷 2026-05-20 오후 5.36.45.png" alt="검색" style="width:20px;height:20px;object-fit:contain;" />
+        </button>
+        <button class="nav-icon-btn" onclick="goTo('bag');setNav('bag')">
+          <img src="img/스크린샷 2026-05-20 오후 4.47.06.png" alt="장바구니" style="width:28px;height:28px;object-fit:contain;" />
+        </button>
+      </div>
+    </div>
+ 
+    <!-- ① 메인 모델 이미지 -->
+    <div class="detail-hero" style="flex-shrink:0;">
+      <div class="detail-hero-face">
+        <span style="font-size:90px;opacity:.12;">👁</span>
+        <div style="position:absolute;inset:0;background:linear-gradient(160deg,#e0d4cc 0%,#c0aea0 40%,#d0c0b0 100%);opacity:.9;"></div>
+        <div style="position:absolute;font-size:64px;opacity:.08;">🧖</div>
+      </div>
+    </div>
+ 
+    <!-- ② 상품 기본 정보 -->
+    <div class="detail-info-wrap">
+      <div class="detail-product-name">루비문 앙큼 캣츠그레이 (축고정)</div>
+      <div class="detail-product-meta">(10p) / 15,000원</div>
+ 
+      <!-- 원데이 / 한달용 탭 -->
+      <div class="detail-type-tabs">
+        <button class="detail-type-tab active" onclick="selectDetailTab(this)">원데이</button>
+        <button class="detail-type-tab" onclick="selectDetailTab(this)">한달용</button>
+      </div>
+ 
+      <!-- 도수 선택 -->
+      <div class="degree-wrap">
+        <div class="detail-degree-input degree-trigger" onclick="toggleDegree(this)" id="degreeDisplay">
+          <span id="degreeText">도수 선택</span>
+          <span id="degreeArrow" style="font-size:11px;color:var(--text-muted);">▾</span>
+        </div>
+        <div class="degree-dropdown" id="degreeDropdown">
+          <div class="degree-option" onclick="selectDegree(this)">0.00</div>
+          <div class="degree-option" onclick="selectDegree(this)">-0.25</div>
+          <div class="degree-option" onclick="selectDegree(this)">-0.50</div>
+          <div class="degree-option" onclick="selectDegree(this)">-0.75</div>
+          <div class="degree-option" onclick="selectDegree(this)">-1.00</div>
+          <div class="degree-option" onclick="selectDegree(this)">-1.25</div>
+          <div class="degree-option" onclick="selectDegree(this)">-1.50</div>
+          <div class="degree-option" onclick="selectDegree(this)">-1.75</div>
+          <div class="degree-option" onclick="selectDegree(this)">-2.00</div>
+          <div class="degree-option" onclick="selectDegree(this)">-2.25</div>
+          <div class="degree-option" onclick="selectDegree(this)">-2.50</div>
+          <div class="degree-option" onclick="selectDegree(this)">-2.75</div>
+          <div class="degree-option" onclick="selectDegree(this)">-3.00</div>
+          <div class="degree-option" onclick="selectDegree(this)">-3.25</div>
+          <div class="degree-option" onclick="selectDegree(this)">-3.50</div>
+          <div class="degree-option" onclick="selectDegree(this)">-3.75</div>
+          <div class="degree-option" onclick="selectDegree(this)">-4.00</div>
+          <div class="degree-option" onclick="selectDegree(this)">-4.25</div>
+          <div class="degree-option" onclick="selectDegree(this)">-4.50</div>
+          <div class="degree-option" onclick="selectDegree(this)">-4.75</div>
+          <div class="degree-option" onclick="selectDegree(this)">-5.00</div>
+          <div class="degree-option" onclick="selectDegree(this)">-5.50</div>
+          <div class="degree-option" onclick="selectDegree(this)">-6.00</div>
+          <div class="degree-option" onclick="selectDegree(this)">-6.50</div>
+          <div class="degree-option" onclick="selectDegree(this)">-7.00</div>
+          <div class="degree-option" onclick="selectDegree(this)">-7.50</div>
+          <div class="degree-option" onclick="selectDegree(this)">-8.00</div>
+        </div>
+      </div>
+ 
+      <!-- 구매 버튼 -->
+      <div class="detail-btn-row">
+        <button class="btn-wishlist">내 눈에 담기<br><span style="font-size:11px;font-weight:400;color:var(--text-muted);">장바구니</span></button>
+        <button class="btn-buynow" onclick="goTo('bag')">이 렌즈 착용하기<br><span style="font-size:11px;font-weight:400;opacity:.7;">결제하기</span></button>
+      </div>
+ 
+      <!-- 다른 컬러들 -->
+      <div class="detail-colors-label">다른 컬러들도 있어요!</div>
+      <div class="detail-colors-row">
+        <div class="color-swatch">
+          <div class="color-swatch-circle" style="background:radial-gradient(circle at 35% 35%,#8a7060,#3a2010);">
+          </div>
+          <div class="color-swatch-name">루비문 앙큼<br>캣츠브라운<br>(축고정)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-swatch-circle" style="background:radial-gradient(circle at 35% 35%,#707860,#2a3020);">
+          </div>
+          <div class="color-swatch-name">루비문 앙큼<br>캣츠올리브<br>(축고정)</div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-swatch-circle" style="background:radial-gradient(circle at 35% 35%,#607090,#1a2840);">
+          </div>
+          <div class="color-swatch-name">루비문 앙큼<br>캣츠블루<br>(축고정)</div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- ③ 상세정보 / 구매후기 탭 -->
+    <div class="detail-tab-row" style="flex-shrink:0;">
+      <div class="detail-tab active" id="tab-info" onclick="switchDetailContent('info')">상세정보</div>
+      <div class="detail-tab" id="tab-review" onclick="switchDetailContent('review')">구매후기 480</div>
+    </div>
+ 
+    <!-- ══ 상세정보 콘텐츠 ══ -->
+    <div id="detail-info-content">
+ 
+      <!-- 카피 문구 -->
+      <div class="detail-copy">
+        <div class="detail-copy-title"><strong>깔끔</strong>하고 <strong>앙큼</strong>한 느낌을 원한다면?</div>
+        <div class="detail-copy-sub">너도 고양이가 될 수 있어!</div>
+      </div>
+ 
+      <!-- 눈 클로즈업 -->
+      <div class="detail-eye-img">👀</div>
+ 
+      <!-- 렌즈 정보 카드 -->
+      <div class="lens-info-card">
+        <div class="lens-info-card-header">렌즈 정보</div>
+        <div class="lens-info-card-body">
+          <div class="lens-info-text">
+            <div class="lens-brand">EYEUM</div>
+            <div class="lens-tone-label">2-TONE COLOR</div>
+            <div class="lens-tone-dots">
+              <div class="tone-dot" style="background:#555;"></div>
+              <div class="tone-dot" style="background:#ccc;border:1px solid #ddd;"></div>
+            </div>
+            <div class="lens-spec-row">
+              <div class="lens-spec-item"><strong>Water Content</strong><span>40%</span></div>
+              <div class="lens-spec-item"><strong>Lens Diameter</strong><span>14.5mm</span></div>
+              <div class="lens-spec-item"><strong>Base Curve</strong><span>8.6mm</span></div>
+              <div class="lens-spec-item"><strong>Replacement</strong><span>1-Year</span></div>
+            </div>
+          </div>
+          <div class="lens-circle-img"></div>
+        </div>
+      </div>
+ 
+      <!-- 해시태그 -->
+      <div class="detail-hashtags">
+        <span class="hashtag">#캣츠아이</span>
+        <span class="hashtag">#투명수체화</span>
+        <span class="hashtag">#축고정</span>
+      </div>
+ 
+      <!-- 착용 전/후 사진 -->
+      <div class="detail-before-after">
+        <div class="ba-main">🧖</div>
+        <div class="ba-sub">👁️</div>
+        <div class="ba-sub2">
+          <div style="width:60px;height:60px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#888,#222);border:4px solid #e8e0d8;"></div>
+        </div>
+      </div>
+      <div class="detail-ba-caption">착용 전과 착용 후 사진입니다<br>사람마다 착용한 느낌이 다를 수 있습니다.</div>
+ 
+      <!-- AR 유도 CTA -->
+      <div class="detail-ar-cta">
+        <p>혹시 마음에 안 드시나요?<br>마음에 안 드시면 <strong>AR분석으로 나만의 렌즈를 다시 찾아봐요!</strong></p>
+        <div style="text-align:center;font-size:22px;margin-bottom:12px;">∞</div>
+        <button class="btn-dark" style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:28px;" onclick="goTo('ar')">
+          실시간 AR착용하러가기 &nbsp;→
+        </button>
+      </div>
+ 
+      <!-- 스펙 상세 표 -->
+      <div class="detail-spec-table">
+        <div class="spec-row">
+          <div class="spec-cell label">착용 권장주기</div>
+          <div class="spec-cell value">하루 착용</div>
+          <div class="spec-cell label">도수 범위</div>
+          <div class="spec-cell value">0.00 ~ 8.00</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-cell label">포정단위</div>
+          <div class="spec-cell value">30p / 1팩</div>
+          <div class="spec-cell label">재질</div>
+          <div class="spec-cell value">실리콘하이드로겔</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-cell label">그래픽 직경</div>
+          <div class="spec-cell value">12.5mm</div>
+          <div class="spec-cell label"></div>
+          <div class="spec-cell value"></div>
+        </div>
+      </div>
+ 
+    </div><!-- /detail-info-content -->
+ 
+    <!-- ══ 구매후기 콘텐츠 ══ -->
+    <div id="detail-review-content" style="display:none;">
+
+      <!-- 리뷰 헤더 -->
+      <div class="review-header">
+        <div class="review-title">REVIEW (480)</div>
+        <div class="review-links">
+          <span class="review-link">리뷰등록</span>
+          <span class="review-link">모두보기</span>
+        </div>
+      </div>
+
+      <!-- 포토 리뷰 썸네일 -->
+      <div class="review-photo-row">
+        <img class="review-thumb" src="img/앱진입화면2(1).jpg" style="object-fit:cover;border-radius:6px;flex-shrink:0;" alt="" />
+        <img class="review-thumb" src="img/앱진입화면2(2).jpg" style="object-fit:cover;border-radius:6px;flex-shrink:0;" alt="" />
+        <img class="review-thumb" src="img/앱진입화면2(3).jpg" style="object-fit:cover;border-radius:6px;flex-shrink:0;" alt="" />
+        <img class="review-thumb" src="img/앱진입화면2(4).jpg" style="object-fit:cover;border-radius:6px;flex-shrink:0;" alt="" />
+      </div>
+
+      <div class="review-divider"></div>
+      <div class="review-sort-label">최근등록순</div>
+
+      <!-- 리뷰 1 -->
+      <div class="review-item">
+        <div class="review-username" style="font-size:14px;font-weight:700;margin-bottom:10px;color:var(--text);">죽고정 처음 잿는데 너무 이쁘요!</div>
+        <img class="review-photo-thumb" src="img/앱진입화면2(1).jpg" style="object-fit:cover;border-radius:8px;display:block;" alt="" />
+        <div class="review-text" style="margin-top:10px;">전부터 축고정 렌즈 궁금했는데 렌즈미에서 새로 축고정이 나왔다고해서 바로 사봤어요! 평소에 그레이 렌즈 좋아하는데 디자인이 너무 이쁘고 눈도 편하고 직경도 다 맘에 들어요!</div>
+      </div>
+
+      <div class="review-divider"></div>
+
+      <!-- 리뷰 2 -->
+      <div class="review-item">
+        <div class="review-username" style="font-size:14px;font-weight:700;margin-bottom:10px;color:var(--text);">죽고정 처음 잿는데 너무 이쁘요!</div>
+        <img class="review-photo-thumb" src="img/앱진입화면2(3).jpg" style="object-fit:cover;border-radius:8px;display:block;" alt="" />
+        <div class="review-text" style="margin-top:10px;">루미문 축고정 이번에 구매해서 써봤어요. 확실히 폭이 제대로 고정되어 있는 상태라 보기에도 좋고 셀카를 찍었을 때 이쁘더라고요! 다시 또 재구매 할 것 같아요^^</div>
+      </div>
+
+      <!-- 페이지네이션 -->
+      <div class="review-pagination">
+        <button class="page-btn">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn">5</button>
+        <button class="page-btn">›</button>
+      </div>
+
+      <!-- 법적 정보 -->
+      <div class="detail-legal">
+        <div class="legal-grid">
+          <div class="legal-item"><strong>품목명</strong>매일 착용 소프트 콘택트렌즈</div>
+          <div class="legal-item"><strong>사용목적</strong>시력보정</div>
+          <div class="legal-item"><strong>의료기기 제조허가번호</strong>제허 15-459호</div>
+          <div class="legal-item"><strong>모델명</strong>x-02</div>
+          <div class="legal-item"><strong>의료기기 광고심의필</strong>조합-2025-09-029</div>
+          <div class="legal-item"><strong>유효기간</strong>28.08.04</div>
+          <div class="legal-item"><strong>판매원</strong>아이음</div>
+        </div>
+        <div class="legal-notice">*이 제품은 의료기기이며 사용상의 주의사항과 사용방법을 잘 읽고 사용하십시오.</div>
+      </div>
+
+    </div><!-- /detail-review-content -->
+ 
+  </div><!-- /screen#detail -->
+ 
+  <!-- ════════════════════════════════
+       BOTTOM NAV (shown on main screens)
+  ════════════════════════════════ -->
+  <nav class="bottom-nav" id="bottomNav" style="display:none;">
+    <button class="nav-item" id="nav-home" onclick="goTo('home');setNav('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      <span>홈</span>
+    </button>
+    <button class="nav-item" id="nav-ar" onclick="goTo('ar');setNav('ar')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934a8 8 0 010 2.132M3.812 10.934a8 8 0 000 2.132M12 4a8 8 0 018 8M12 4a8 8 0 00-8 8"/></svg>
+      <span>AR</span>
+    </button>
+    <button class="nav-item" id="nav-bag" onclick="goTo('bag');setNav('bag')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span>장바구니</span>
+    </button>
+    <button class="nav-item" id="nav-mypage" onclick="goTo('mypage');setNav('mypage')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>마이</span>
+    </button>
+  </nav>
+ 
+</div>
+ 
+<script>
+  const mainScreens = ['home','ar','bag','mypage'];
+  const navHistory = [];
+
+  // 홈 히어로 슬라이더
+  let heroIndex = 0;
+  let heroAutoTimer = null;
+  const heroTexts = [
+    { sub: 'For the Beautiful and the Free', title: "EYEUM's own<br>Holiday Collection" },
+    { sub: 'Find Your Perfect Lens',         title: '나만의 렌즈를<br>찾아보세요' },
+    { sub: 'New Arrival Collection',         title: '새로운 컬러로<br>매일을 특별하게' }
+  ];
+  function goSlide(idx) {
+    heroIndex = idx;
+    const slider = document.getElementById('heroSlider');
+    if (!slider) return;
+    slider.style.transform = `translateX(-${heroIndex * 100}%)`;
+    document.querySelectorAll('.hero-dot').forEach((d, i) => d.classList.toggle('active', i === heroIndex));
+    const t = heroTexts[heroIndex];
+    const sub = document.getElementById('heroSub');
+    const title = document.getElementById('heroTitle');
+    if (sub) sub.textContent = t.sub;
+    if (title) title.innerHTML = t.title;
+  }
+  function startHeroAuto() {
+    clearInterval(heroAutoTimer);
+    heroAutoTimer = setInterval(() => goSlide((heroIndex + 1) % 3), 3000);
+  }
+  (function initHeroSwipe() {
+    let startX = 0, dragging = false;
+    const banner = document.querySelector('.hero-banner');
+    if (!banner) return;
+    banner.addEventListener('touchstart', e => { startX = e.touches[0].clientX; dragging = true; }, {passive:true});
+    banner.addEventListener('touchend', e => {
+      if (!dragging) return;
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goSlide(diff > 0 ? Math.min(heroIndex+1,2) : Math.max(heroIndex-1,0));
+      dragging = false;
+      startHeroAuto();
+    });
+    banner.addEventListener('mousedown', e => { startX = e.clientX; dragging = true; });
+    banner.addEventListener('mouseup', e => {
+      if (!dragging) return;
+      const diff = startX - e.clientX;
+      if (Math.abs(diff) > 40) goSlide(diff > 0 ? Math.min(heroIndex+1,2) : Math.max(heroIndex-1,0));
+      dragging = false;
+      startHeroAuto();
+    });
+    startHeroAuto();
+  })();
+
+  function currentScreenId() {
+    const el = document.querySelector('.screen.active');
+    return el ? el.id : null;
+  }
+
+  function goTo(id) {
+    const cur = currentScreenId();
+    if (cur && cur !== id) navHistory.push(cur);
+
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+
+    const nav = document.getElementById('bottomNav');
+    if (mainScreens.includes(id)) {
+      nav.style.display = 'flex';
+      setNav(id);
+    } else {
+      nav.style.display = 'none';
+    }
+
+    document.getElementById(id).scrollTop = 0;
+
+    if (id === 'ar') startARScan();
+  }
+
+  function startARScan() {
+    const face = document.querySelector('.ar-face');
+    face.classList.remove('scanning', 'ar-done');
+    void face.offsetWidth;
+    face.classList.add('scanning');
+    setTimeout(() => face.classList.add('ar-done'), 3200);
+  }
+
+  function goBack() {
+    if (navHistory.length === 0) return;
+    const prev = navHistory.pop();
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(prev).classList.add('active');
+
+    const nav = document.getElementById('bottomNav');
+    if (mainScreens.includes(prev)) {
+      nav.style.display = 'flex';
+      setNav(prev);
+    } else {
+      nav.style.display = 'none';
+    }
+
+    document.getElementById(prev).scrollTop = 0;
+  }
+ 
+  function setNav(id) {
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    const el = document.getElementById('nav-' + id);
+    if (el) el.classList.add('active');
+  }
+ 
+  function selectSkin(btn) {
+    document.querySelectorAll('.skin-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+  }
+  function selectCard(btn) {
+    const group = btn.closest('.skin-type-grid, .personal-color-grid');
+    if (!group) return;
+    group.querySelectorAll('button').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+  }
+
+  function validateOnboard2() {
+    const grids = document.querySelectorAll('#onboard2 .personal-color-grid');
+    const skinSelected  = grids[0] && grids[0].querySelector('.personal-color-card.selected');
+    const colorSelected = grids[1] && grids[1].querySelector('.personal-color-card.selected');
+    const eyeInput = document.querySelector('#onboard2 .eye-input');
+    const eyeFilled = eyeInput && eyeInput.value.trim() !== '';
+    if (!skinSelected || !colorSelected || !eyeFilled) {
+      document.getElementById('onboard2Modal').style.display = 'flex';
+      return;
+    }
+    goTo('onboard3');
+  }
+  function closeOnboard2Modal() {
+    document.getElementById('onboard2Modal').style.display = 'none';
+  }
+ 
+  // 상세페이지: 원데이/한달용 탭 전환
+  function selectDetailTab(btn) {
+    document.querySelectorAll('.detail-type-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+ 
+  // 상세페이지: 상세정보/구매후기 콘텐츠 전환
+  function switchDetailContent(tab) {
+    const infoContent = document.getElementById('detail-info-content');
+    const reviewContent = document.getElementById('detail-review-content');
+    const tabInfo = document.getElementById('tab-info');
+    const tabReview = document.getElementById('tab-review');
+ 
+    if (tab === 'info') {
+      infoContent.style.display = 'block';
+      reviewContent.style.display = 'none';
+      tabInfo.classList.add('active');
+      tabReview.classList.remove('active');
+    } else {
+      infoContent.style.display = 'none';
+      reviewContent.style.display = 'block';
+      tabInfo.classList.remove('active');
+      tabReview.classList.add('active');
+    }
+    // 상세페이지 스크롤 최상단 이동
+    document.getElementById('detail').scrollTop = 0;
+  }
+ 
+  // 상품 카드 클릭 → 상세페이지로
+  const searchProducts = [
+    { name:'루비문 앙큼 캣츠그레이 (축고정)', price:'15,000원', info:'12.7mm / 하루착용', img:'img/앱진입화면2(1).jpg' },
+    { name:'판데이아 베이지', price:'15,000원', info:'12.7mm / 하루착용', img:'img/앱진입화면2(2).jpg' },
+    { name:'뮤스존 베이지 (축고정)', price:'15,000원', info:'12.7mm / 하루착용', img:'img/앱진입화면2(3).jpg' },
+    { name:'뮤스 초코', price:'15,000원', info:'12.7mm / 하루착용', img:'img/앱진입화면2(4).jpg' },
+    { name:'글래시 올리브그린', price:'15,000원', info:'14.0mm / 하루착용', img:'img/(홈)원데이1.jpg' },
+    { name:'소프렌 포레스트', price:'15,000원', info:'13.8mm / 하루착용', img:'img/(홈)원데이2.jpg' },
+    { name:'글래시 하니브라운 (축고정)', price:'25,000원', info:'13.5mm / 한달착용', img:'img/(홈)원데이1.jpg' },
+    { name:'소프렌 블루라떼', price:'25,000원', info:'14.0mm / 한달착용', img:'img/(홈)원데이2.jpg' },
+  ];
+  function runSearch(q) {
+    const kw = q.trim().toLowerCase();
+    const recent = document.getElementById('searchRecent');
+    const results = document.getElementById('searchResults');
+    const empty = document.getElementById('searchEmpty');
+    if (!kw) {
+      recent.style.display = 'block';
+      results.style.display = 'none';
+      empty.style.display = 'none';
+      return;
+    }
+    recent.style.display = 'none';
+    const filtered = searchProducts.filter(p => p.name.toLowerCase().includes(kw));
+    if (filtered.length === 0) {
+      results.style.display = 'none';
+      empty.style.display = 'flex';
+      return;
+    }
+    empty.style.display = 'none';
+    results.style.display = 'block';
+    document.getElementById('searchResultCount').textContent = `검색 결과 ${filtered.length}개`;
+    document.getElementById('searchResultGrid').innerHTML = filtered.map(p => `
+      <div onclick="goToDetail()" style="background:#fff;cursor:pointer;">
+        <img src="${p.img}" style="width:100%;height:200px;object-fit:cover;object-position:center top;display:block;" />
+        <div style="padding:10px 10px 14px;">
+          <div style="font-size:11px;color:#3b3b46;margin-bottom:5px;line-height:1.4;">${p.name}</div>
+          <div style="font-size:14px;font-weight:700;color:#1a1a1a;">${p.price} <span style="font-size:10px;font-weight:400;color:#999;">${p.info}</span></div>
+        </div>
+      </div>`).join('');
+  }
+  function searchTag(el) {
+    document.getElementById('searchInput').value = el.textContent;
+    runSearch(el.textContent);
+  }
+
+  function openPickupSearch() {
+    document.getElementById('pickupSearchArea').style.display = 'block';
+    document.getElementById('pickupSearchInput').value = '';
+    filterBranches('');
+    document.getElementById('pickupSearchInput').focus();
+  }
+  function selectBranch(el, name, addr) {
+    document.getElementById('pickupSelectedText').textContent = 'EYEUM ' + name;
+    document.getElementById('pickupSelectedText').style.color = '#1a1a1a';
+    document.getElementById('pickupChangeBtn').textContent = '변경';
+    document.getElementById('pickupSearchArea').style.display = 'none';
+  }
+  function filterBranches(q) {
+    const kw = q.trim().toLowerCase();
+    document.querySelectorAll('#pickupBranchList .pickup-branch').forEach(b => {
+      const name = b.dataset.name.toLowerCase();
+      b.style.display = (!kw || name.includes(kw)) ? 'flex' : 'none';
+    });
+  }
+
+  function goToDetail() {
+    goTo('detail');
+    switchDetailContent('info');
+  }
+
+  // 도수 드롭다운
+  function toggleDegree(el) {
+    const dropdown = document.getElementById('degreeDropdown');
+    const isOpen = dropdown.classList.contains('open');
+    dropdown.classList.toggle('open');
+    el.classList.toggle('open');
+    document.getElementById('degreeArrow').textContent = isOpen ? '▾' : '▴';
+  }
+
+  function selectDegree(optionEl) {
+    const value = optionEl.textContent;
+    const display = document.getElementById('degreeDisplay');
+    const dropdown = document.getElementById('degreeDropdown');
+    document.getElementById('degreeText').textContent = value;
+    document.getElementById('degreeText').style.color = 'var(--text)';
+    document.getElementById('degreeArrow').textContent = '▾';
+    display.classList.remove('open');
+    dropdown.classList.remove('open');
+    dropdown.querySelectorAll('.degree-option').forEach(o => o.classList.remove('selected'));
+    optionEl.classList.add('selected');
+  }
+
+  // 드롭다운 외부 클릭 시 닫기
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.degree-wrap')) {
+      document.getElementById('degreeDropdown')?.classList.remove('open');
+      const display = document.getElementById('degreeDisplay');
+      if (display) {
+        display.classList.remove('open');
+        document.getElementById('degreeArrow').textContent = '▾';
+      }
+    }
+  });
+
+  // 마이페이지 탭 클릭 → 해당 섹션으로 스크롤
+  function scrollToSection(sectionId, chipEl) {
+    document.querySelectorAll('.mypage-tabs .tab-chip').forEach(c => c.classList.remove('active'));
+    chipEl.classList.add('active');
+    const section = document.getElementById(sectionId);
+    const screen = document.getElementById('mypage');
+    screen.scrollTo({ top: section.offsetTop - screen.offsetTop, behavior: 'smooth' });
+  }
+
+  // 마이페이지 탭 마우스 드래그 가로 스크롤
+  (function() {
+    const tabs = document.querySelector('.mypage-tabs');
+    let isDown = false, startX, scrollLeft;
+    tabs.addEventListener('mousedown', e => {
+      isDown = true;
+      startX = e.pageX - tabs.offsetLeft;
+      scrollLeft = tabs.scrollLeft;
+      tabs.style.cursor = 'grabbing';
+    });
+    tabs.addEventListener('mouseleave', () => { isDown = false; tabs.style.cursor = 'grab'; });
+    tabs.addEventListener('mouseup', () => { isDown = false; tabs.style.cursor = 'grab'; });
+    tabs.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - tabs.offsetLeft;
+      tabs.scrollLeft = scrollLeft - (x - startX);
+    });
+    tabs.style.cursor = 'grab';
+  })();
+
+  // 캐러셀 dots 업데이트 (카드 2개씩 기준)
+  ['grid-find','grid-oneday','grid-month','grid-ar1','grid-ar2'].forEach(id => {
+    const grid = document.getElementById(id);
+    if (!grid) return;
+    grid.addEventListener('scroll', () => {
+      const cardW = 179 + 8; // width + gap
+      const idx = Math.round(grid.scrollLeft / (cardW * 2)); // 2카드씩 페이지
+      document.querySelectorAll(`.product-dot[data-grid="${id}"]`).forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+      });
+    });
+  });
+
+  // 홈 + AR 제품 그리드 드래그/스와이프 (부드러운 스냅)
+  document.querySelectorAll('.home-product-grid, .ar-product-grid').forEach(grid => {
+    const CARD = 179 + 8; // 카드 너비 + gap
+    let startX = 0, startScroll = 0, active = false;
+    grid.style.cursor = 'grab';
+
+    function snapTo(scrollLeft) {
+      const idx = Math.round(scrollLeft / CARD);
+      grid.scrollTo({ left: idx * CARD, behavior: 'smooth' });
+    }
+
+    grid.addEventListener('mousedown', e => {
+      active = true; startX = e.clientX; startScroll = grid.scrollLeft;
+      grid.style.cursor = 'grabbing';
+    });
+    window.addEventListener('mouseup', () => {
+      if (!active) return;
+      active = false; grid.style.cursor = 'grab';
+      snapTo(grid.scrollLeft);
+    });
+    grid.addEventListener('mousemove', e => {
+      if (!active) return;
+      grid.scrollLeft = startScroll - (e.clientX - startX);
+    });
+
+    grid.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX; startScroll = grid.scrollLeft;
+    }, { passive: true });
+    grid.addEventListener('touchmove', e => {
+      grid.scrollLeft = startScroll - (e.touches[0].clientX - startX);
+    }, { passive: true });
+    grid.addEventListener('touchend', () => {
+      snapTo(grid.scrollLeft);
+    }, { passive: true });
+  });
+</script>
+</body>
+</html>
